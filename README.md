@@ -4,11 +4,11 @@ Python con la sua semplicità e la presenza di numerose librerie permette di avv
 # Struttura di ogni laboratorio
 Ogni laboratorio contiene un readme con le seguenti informazioni:
 ## Tema
-Descrizione sintetica dell'argomento principale trattato (es. Sistemi di Controllo, Programmazione OOP, Reazioni Chimiche).
+Descrizione sintetica dell'argomento principale trattato.
 ## Scopo
-L'obiettivo didattico o tecnico del laboratorio. Cosa ci si aspetta di imparare o dimostrare al termine delle attività?
+L'obiettivo didattico del laboratorio. Cosa ci si aspetta di imparare o dimostrare al termine delle attività?
 ## Durata
-Tempo stimato per il completamento (es. 2 ore, 3 incontri da 50 minuti).
+Tempo stimato per il completamento.
 ## Metodologia
 Approccio utilizzato per svolgere l'attività (es. Problem Solving, Peer Review, Apprendimento Esperienziale, Lavoro di gruppo).
 ## Descrizione del materiale
