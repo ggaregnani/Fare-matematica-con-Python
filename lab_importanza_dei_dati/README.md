@@ -108,7 +108,7 @@ L'accuratezza indica la percentuale di risposta corretta del modello sul totale 
 
 $$ Accuracy = \frac{v1 + v2}{v1 + v2 + f1 + f2} $$
 
-### Matrice di confusione con python
+### Matrice di confusione con Python
 
 1. **Previsione**: dal menù a tendina sulla destra scegliere "File" e controllare la previsione per ogni immagine
 contando quanti $v1, v2,f1,f2$ ci sono.
