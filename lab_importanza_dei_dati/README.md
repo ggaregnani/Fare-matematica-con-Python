@@ -27,18 +27,20 @@ y(t) = h - \frac{1}{2}g t^2
 $$
 
 Dove:
-*   $g \approx 9.81 \, m/s^2$ è l'accelerazione di gravità.
+*   $g \approx 9.81 m s^{-2}$ è l'accelerazione di gravità.
 *   $t$ è il tempo trascorso dal distacco.
 
-Il **tempo di volo** ($t_f$) si ottiene ponendo $y(t) = 0$:
+Il tempo di volo $t_f$ si ottiene ponendo $y(t) = 0$:
+
 $$ t_f = \sqrt{\frac{2h}{g}} $$
 
-La distanza orizzontale percorsa, è:
+La distanza orizzontale $l$ è:
+
 $$ l = v_0 \cdot \sqrt{\frac{2h}{g}} $$
 
 Noti
-*   $v_0 = 0.560 \, m/s$.
-*   $2 == 22 \, cm$.
+*   $v_0 = 0.560ms^{-1}$.
+*   $l == 22cm$.
 
 L'algoritmo sarà:
 ```text
