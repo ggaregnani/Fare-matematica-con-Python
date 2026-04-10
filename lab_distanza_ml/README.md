@@ -28,10 +28,9 @@ Questi dati sono stati realmente messi a disposizione da George su [Kaggle](http
 È possibile infatti scaricare le canzoni e le loro caratteristiche dalla piattaforma attraverso [API]( https://developer.spotify.com/documentation/web-api/reference/get-audio-features).
 
 Conosci quindi le canzoni di George e ascolti due tracce musicali per capire i suoi gusti:
-1. una canzone che piace a George :+1:
-[![piace](https://www.youtubeeducation.com/watch?v=k49I5m1J6Is)](https://www.youtubeeducation.com/watch?v=k49I5m1J6Is)
-2. una canzone che non piace a George :-1:
-[![nonpiace](https://www.youtubeeducation.com/watch?v=lhhBg6WLjoU)](https://www.youtubeeducation.com/watch?v=lhhBg6WLjoU)
+1. una canzone che [piace a George](https://youtu.be/k49I5m1J6Is) :+1:
+2. una canzone che [non piace a George](https://youtu.be/lhhBg6WLjoU) :-1:
+
 
 Un algoritmo a disposizione della piattaforma analizza la traccia audio della canzone e ricava degli indicatori come 
 *danceability*, *energy*, *duration*, *acousticness* come puoi vedere dal [file](./dati_training/data.csv) 
