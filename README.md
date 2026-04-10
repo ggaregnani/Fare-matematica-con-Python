@@ -17,7 +17,8 @@ Ed eventualmente introduzioni e spiegazioni al notebook da utilizzare in classe.
 Si consiglia di scaricare i notebook e condividerli con gli studenti utilizzando, ad esempio, Colab.
 Se si utilizza classroom si può creare un compito con una copia per ogni studente.
 I readme possono, invece, essere proiettati in classe come introduzione all'esercitazione.
-La [Guida Docente](GUIDA_DOCENTE.md) contiene invece soluzioni e spiegazione degli esercizi.
+La [Guida Docente](GUIDA_DOCENTE.md) contiene invece la lista dei laboratori, le soluzioni e la
+spiegazione degli esercizi.
 
 
 # Contributi e ringraziamenti

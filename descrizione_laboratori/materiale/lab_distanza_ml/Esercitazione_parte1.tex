@@ -1,0 +1,211 @@
+\documentclass{exam}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularray}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{pgfplots} 
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{arev}
+\usepackage{siunitx}
+\usepackage[
+ font=normal % or small or scriptsize
+ ]{subfig}
+\usetikzlibrary{shapes.geometric}
+
+\linespread{2}
+\setlength\answerlinelength{7cm}
+
+% LAYOUT FOGLIO
+\geometry{a4paper, top=1cm, bottom=1cm, left=1cm, right=1cm}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{10pt}
+
+\begin{document}
+%\input{files_struct/intestazione.tex}  \unskip 
+
+\noindent Classe:\\
+Nome e Cognome:
+
+
+\noindent \rule{\textwidth}{0.4pt}
+\Large{L'algoritmo k$-$NN}\\
+\normalsize
+Si ha a disposizione il seguente \textbf{dataset di training} con riportati i dati relativi alla playlist di un utente.\\
+
+\begin{small}
+\begin{tabular}{|c|c|c|}
+\hline
+Danceability & Acousticness  & Label\\ \hline
+1 & 5 & Like \\
+2 & 8 & Like\\
+4 & 6 &  Like\\
+4 & 10 &  Like\\
+5 & 3 &  Like\\
+5 & 4 &  Like\\
+8 & 3 & Don't like\\
+8 & 5 & Don't like\\
+10 & 9 & Don't like\\
+9 & 8 & Don't like\\
+9 & 10 & Don't like\\
+\hline
+\end{tabular}
+\end{small}
+
+La prima \textit{feature} (colonna) rappresenta la danceability di una canzone, la seconda l'acousticness. Le prime due colonne costituiscono la mia matrice $X_{train}$.
+Alll'utente della tua piattaforma solo alcune canzoni piacciono. L'informazione è riportata nella terza colonna, \textit{label}. Questa colonna è il vettore $y_{train}$ che voglio provare a predirre in base ai dati della matrice $X_{train}$.
+ 
+Si ha poi a disposizione un secondo dataset su cui testare il modello, \textbf{dataset di test}.  \\
+
+\begin{small}
+\begin{tabular}{|c|c|c|}
+\hline
+Danceability & Acousticness  & Label\\ \hline
+5 & 8 & Don't like \\
+7 & 4 &  Like\\
+10 & 4 &  Don't like\\
+10 & 8 &  Don't like\\
+3 & 7 & Like\\
+\hline
+\end{tabular}
+\end{small}
+
+\begin{questions}
+
+\question 
+Consideriamo nel \textbf{dataset di training} le due \textit{feature} come le coordinate $(x,y)$ di un punto nel piano cartesiano come riportato nel seguente grafico.
+
+
+    \begin{tikzpicture}
+    \begin{axis}
+    [
+    axis x line=middle,
+    axis y line=middle,
+    axis equal image, 
+    width=0.8\textwidth,
+    %height=3\textwidth,
+    xmin=-1,
+    ymin=-1, 
+    xmax=11,
+    ymax=11,
+    samples=100,
+    grid=major,
+    %xtick={-1,1,2,3,4},
+    %ytick={-1,1,2,3,4,5},
+    xlabel={Danceability},
+    ylabel={Acousticness}] 
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$A_1 $}},circle,fill,inner sep=2.5pt] at (axis cs: 1,5) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$A_2 $}},circle,fill,inner sep=2.5pt] at (axis cs: 2,8) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$A_3 $}},circle,fill,inner sep=2.5pt] at (axis cs: 4,6) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$A_4 $}},circle,fill,inner sep=2.5pt] at (axis cs: 4,10) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$A_5 $}},circle,fill,inner sep=2.5pt] at (axis cs: 5,3) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$A_6 $}},circle,fill,inner sep=2.5pt] at (axis cs: 5,4) {};
+%    \node[label={[yshift=-1ex, xshift=3ex]180:{$ $}},circle,fill,inner sep=3pt] at (axis cs: 7,4) {};
+%    \node[label={[yshift=-2ex, xshift=3ex]180:{$ $}},mark=*,fill,inner sep=3pt] at (axis cs: 5,8) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$B_1$}},rectangle,fill,inner sep=3pt] at (axis cs: 8,3) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$B_2 $}},rectangle,fill,inner sep=3pt] at (axis cs: 8,5) {};
+%    \node[label={[yshift=-2ex, xshift=3ex]180:{$ $}},mark=x,fill,inner sep=3pt] at (axis cs: 10,4) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$B_3 $}},rectangle,fill,inner sep=3pt] at (axis cs: 10,9) {};
+    \node[label={[yshift=-2ex, xshift=3ex]180:{$B_4 $}},rectangle,fill,inner sep=3pt] at (axis cs: 9,8) {};
+        \node[label={[yshift=-2ex, xshift=3ex]180:{$B_5$}},rectangle,fill,inner sep=3pt] at (axis cs: 9,10) {};
+    \end{axis}
+    \end{tikzpicture}
+
+Classifica i seguenti punti $P_1(5;8),\, P_2(7,4), P_3(10,4), P_4(10,8), P_5(3,7)$ considerando $k=3$.
+
+\begin{parts}
+\part Come si calcola la distanza tra due punti non allineati orizzontalmente o verticalmente?\\[0.3cm]
+\makebox[0.7\textwidth]{\dotfill}
+\part E nel caso di punti allineati orizzontalmente o verticalmente?\\[0.3cm]
+\makebox[0.7\textwidth]{\dotfill}
+\part Riporta le distanze nella seguente tabella
+
+\begin{tabular}{|*{12}{m{0.8cm}|}}
+\hline
+ & $A_1 $ & $A_2 $ & $A_3 $ & $A_4 $ & $A_5 $ & $A_6 $ & $B_1 $ & $B_2 $ & $B_3 $ & $B_4 $ & $B_5$\\
+\hline
+$P_1$ & & & & & & & & & &  &\\
+\hline
+$P_2$  & & & & & & & & & & & \\
+\hline
+$P_3$  & & & & & & & & & & & \\
+\hline
+$P_4$  & & & & & & & & & & & \\
+\hline
+$P_5$ & & & & & & & & & &  &\\
+\hline
+\end{tabular}
+
+\part Ordinare le distanze in ordine crescente, calcolare la frequenza per ogni label e classificare il punto.
+
+\begin{tabular}{|*{7}{m{1.5cm}|}}
+\hline
+ &  \multicolumn{3}{|c|}{Distanze ordinate} &$f_{ \text{Like}}$&$f_{\text{Don't like}}$& label \\
+\hline
+$P_1$  &  &  &  &  &  & \\
+\hline
+$P_2$  &  &  &  &  &  & \\
+\hline
+$P_3$  &  &  &  &  &  & \\
+\hline
+$P_4$  &  &  &  &  &  & \\
+\hline
+$P_5$  &  &  &  &  &  &\\
+\hline
+\end{tabular}
+
+\end{parts}
+
+
+\question 
+Sai che i cinque punti che hai classificato precedentemente in realtà sono rispettivamente Don't like, Like, Don't like, Don't like, Like.
+
+\begin{parts}
+
+\part Completare la seguente matrice di confusione
+
+
+\begin{tabular}{c|m{2cm}|m{2cm}|}
+\multicolumn{1}{c}{} & \multicolumn{2}{c}{Valori predetti} \\ \cline{2-3}
+\multirow{2}{*}{Valori reali} &  &  \\ \cline{2-3}
+&  &  \\ \cline{2-3}
+\end{tabular}
+
+\part Come si calcola l'accuratezza?\\[0.3cm]
+\makebox[0.7\textwidth]{\dotfill}
+
+\part In questo caso l'accuratezza risulta \makebox[2cm]{\dotfill}
+ 
+\end{parts}
+\question Ponendo k=5
+
+\begin{parts}
+\part   il punto $P_2$ come viene classificato? Riportare i conti svolti.
+\makeemptybox{6cm}
+
+
+\part Come cambia la matrice di confusione? E l'accuratezza?
+\begin{tabular}{c|m{2cm}|m{2cm}|}
+\multicolumn{1}{c}{} & \multicolumn{2}{c}{Valori predetti} \\ \cline{2-3}
+\multirow{2}{*}{Valori reali} &  &  \\ \cline{2-3}
+&  &  \\ \cline{2-3}
+\end{tabular}
+
+In questo caso l'accuratezza risulta \makebox[2cm]{\dotfill}
+
+\end{parts}
+% P_1 quadrati, P_2 cerchio P_3 quadrato
+
+
+
+
+
+
+\end{questions}
+\end{document}
