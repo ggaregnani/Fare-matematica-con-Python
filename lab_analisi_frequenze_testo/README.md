@@ -1,11 +1,11 @@
 # L'importanza dei dati
 
-| **Tema**                 | Analisi statistica di un testo, legge di potenza e scala log-log                                                                   |
-|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**)                                                          |
-| **Durata**               | 1 ora                                                                                                                                            |
-| **Target**               | Studenti del triennio, classe terza                                                                                                                             |
-| **Setting della classe** | Analisi di caso |
+| **Tema**                 | Analisi statistica di un testo, legge di potenza e scala log-log                        |
+|:-------------------------|:----------------------------------------------------------------------------------------|
+| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**) |
+| **Durata**               | 1 ora                                                                                   |
+| **Target**               | Studenti del triennio, classe terza                                                     |
+| **Setting della classe** | Analisi di caso                                                                         |
 
 ## Analisi del testo
 
@@ -26,9 +26,9 @@ Ad esempio, consideriamo la frase:
 "Ho deciso di salire le scale molto piano, 
 l'ufficio si trovava al quinto piano senza ascensore!". 
 
-Nella frase appare due volte lamparola *piano* con diversi significati. Definiamo:
+Nella frase appare due volte la parola *piano* con diversi significati. Definiamo:
 
-1. **parola token** una singola occorenza di una stringa all'interno del testo, in questo caso, abbiamo due *parole
+1. **parola token** una singola occorrenza di una stringa all'interno del testo, in questo caso, abbiamo due *parole
 token* piano;
 2. **parola tipo** la classe di tutti i token che hanno la stessa sequenza di caratteri, quindi *la classe* piano 
 che rappresenta tutte le parole token piano anche con diversi significati. 
@@ -49,7 +49,7 @@ Ordiniamo le parole tipo in base alla loro frequenza decrescente ottenendo il **
 cioè la posizione occupata dalla parola tipo all'interno dell'ordinamento.
 
 | Parola tipo | Frequenza assoluta | Frequenza relativa | Rango |
-| ----------- | ------------------ | ------------------ | ----- |
+|-------------|--------------------|--------------------|-------|
 | piano       | 2                  | 0.1429             | 1     |
 | ho          | 1                  | 0.0714             | 2     |
 | deciso      | 1                  | 0.0714             | 2     |
@@ -60,7 +60,7 @@ cioè la posizione occupata dalla parola tipo all'interno dell'ordinamento.
 Cerchiamo di capire la legge nascosta partendo da un archivio 
 dei contenuti di Wikipedia e messo a disposizione sulla piattaforma 
 [Hugging Face](https://huggingface.co/datasets/Salesforce/wikitext) (Merity et al., 2016). 
-Sono stasi messi a disposizione tre dataset:
+I dataset messi a disposizione sono tre:
 1. train
 2. test
 3. validation
@@ -82,7 +82,7 @@ con il notebook dell'esercitazione 1.
 Trovata la legge di Zipf rifletti sul suo significato e su come questa legge possa influenzare i
 modelli di IA generativa.
 
-Questo schema nascosto si presenta in altri fenomenti legati al web, ai social o al mondo reale?
+Questo schema nascosto si presenta in altri fenomeni legati al web, ai social o al mondo reale?
 
 
 
