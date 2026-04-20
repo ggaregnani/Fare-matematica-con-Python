@@ -1,5 +1,16 @@
 # L'importanza dei dati
 
+| **Tema**                 | Costruzione di una **matrice di confusione** per confrontare due modelli di ML                                                                          |
+|:-------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Scopo (DigComp3.0)**   | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**)                                                                 |
+| **Pre-requisiti**        | Tabella a doppia entrata                                                                                                                                |
+| **Durata**               | 1-2 ore                                                                                                                                                 |
+| **Target**               | Studenti del Biennio                                                                                                                                    |
+| **Setting della classe** | Dividere la classe in due gruppi, a un gruppo viene assegnato il modello A e ad un gruppo il modello B. Assegnare almeno un computer ogni due studenti. |
+
+
+# Descrizione e fasi della lezione
+
 ## File necessari e condivisione
 Gli studenti vengono suddivisi in due gruppi A e B. Assicurarsi che la coppia o il singolo
 studente con il modello A sia vicino a uno studente con il modello B per potersi

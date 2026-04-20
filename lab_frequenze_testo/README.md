@@ -1,11 +1,11 @@
 # La legge nascosta
 
-| **Tema**                 | Analisi statistica di un testo, legge di potenza e scala log-log                        |
-|:-------------------------|:----------------------------------------------------------------------------------------|
-| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**) |
-| **Durata**               | 1 ora                                                                                   |
-| **Target**               | Studenti del triennio, classe terza                                                     |
-| **Setting della classe** | Analisi di caso                                                                         |
+| **Tema**                 | Analisi statistica di un testo, legge di potenza e scala log-log                           |
+|:-------------------------|:-------------------------------------------------------------------------------------------|
+| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**)    |
+| **Durata**               | 2 ore                                                                                      |
+| **Target**               | Studenti del triennio, classe terza                                                        |
+| **Setting della classe** | Laboratorio di informatica con computer per ogni  studente e scheda dell'attività.         |
 
 ## Analisi del testo
 
