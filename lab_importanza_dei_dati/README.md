@@ -10,7 +10,7 @@
 ## Introduzione al machine learning
 
 ### La biglia cade nel cestino?
-Cerchiamo un modello che ci aiuti a prendere una decisione e a dire se la biglia cade 
+Cerchiamo un modello matematico che ci aiuti a prendere una decisione e a dire se la biglia cade 
 nel cestino.
 
 ![biglia](../assets/biglia.png)
