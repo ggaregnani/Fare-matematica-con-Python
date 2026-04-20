@@ -38,13 +38,13 @@ Teachable machine, dopo aver aperto il progetto, ti permette di visualizzare i d
 ma, in questa fase, il docente non osserva le differenze tra i due modelli. I dati vengono
 visualizzati solo dopo la costruzione della matrice di accuratezza.
 Fare la previsione assieme con un'immagine dal dataset di test assieme.
-## Esercitazione (15-20 minuti)
+### Esercitazione (15-20 minuti)
 Dopo aver spiegato la matrice di confusione chiedere agli studenti di contare le previsioni
 corrette e non corrette per il calcolo dell'accuratezza.
 Essendo solo 20 immagini, il calcolo e matrice possono essere costruite con carta e penna.
 Qualora si voglia avvicinare gli studenti a Python e al coding si può iniziare con questo 
 semplice notebook.
-## Discussione (10-20 minuti)
+### Discussione (10-20 minuti)
 Chiedere agli studenti quali accuratezze hanno ottenuto. Gli studenti con il modello 
 A ottengono un'accuratezza inferiore a quelli con il modello B. Discutere sui fattori
 che possono aver influenzato le performance incentivando le interazioni con l'altro gruppo.

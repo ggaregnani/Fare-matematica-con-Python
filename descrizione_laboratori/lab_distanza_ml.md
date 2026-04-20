@@ -1,4 +1,4 @@
-# L'importanza dei dati
+# Distanza euclidea e machine learning
 
 | **Tema**                 | Calcolo della distanza tra due punti per comprendere la matematica alla base degli algoritmi di machine learning                                                       |
 |:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,7 +34,7 @@ brevemente agli studenti come funziona un algoritmo di machine learning ML.
 Utilizzare il README del laboratorio condividendolo con
 gli studenti o proiettandolo per spiegare l'algoritmo.
 
-## Esercitazione parte 1 (50 minuti)
+### Esercitazione parte 1 (50 minuti)
 Consegnare agli studenti [esercitazione_parte1](../lab_distanza_ml/esercitazione_parte1.pdf) 
 e si può chiedere di svolgere le prime fasi dell'esercizio con un foglio di calcolo oppure a mano:
 1. calcolo delle distanze dei punti di test dai punti di training
@@ -52,7 +52,7 @@ Obiettivo è far capire come sia compito del data scientist trovar quel valore d
 che migliora le performance del modello. Si può chiedere agli studenti se ha senso aumentare k e che rischi 
 ci sono a utilizzare un k troppo alto.
 
-## Esercitazione parte 2 (100 minuti)
+### Esercitazione parte 2 (100 minuti)
 
 Il [esercitazione_parte2](../lab_distanza_ml/esercitazione_parte2.ipynb)  può essere eseguito passo passo con gli studenti. Dopo ale prime considerazioni
 sul dataset, si chiede agli studenti di scegliere due colonne del dataset che secondo loro possono essere 
