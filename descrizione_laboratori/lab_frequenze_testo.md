@@ -29,7 +29,7 @@ Per prima cosa, dovranno contare le parole e quindi si forniranno agli strumenti
 concetti come parola token, parola tipo, frequenza relativa e assoluta.
 
 ### Esercitazione parte 1 (30 minuti)
-In questa fase gli studenti saranno guidata passo dopo passo tramite il notebook [esercitazione_parte1_3](../lab_frequenze_testo/esercitazione_parte1_3.ipynb)
+In questa fase gli studenti saranno guidata passo dopo passo tramite il notebook [esercitazione_parte1_3](../lab_frequenze_testo/Esercitazione_parte1_3.ipynb)
 a scoprire la legge. Il dataset a disposizione sono i contenuti di Wikipedia. In prima fase usare
 il dataset test per avere tempi di lettura dei dati più sostenibili in classe.
 
@@ -42,7 +42,7 @@ Il grafico ottenuto con il dataset test è il seguente:
 
 ### Esercitazione parte 2 (20 minuti)
 
-Gli studenti hanno a disposizione il grafico della legge di Zipf nell'[esercitazione_parte2](../lab_frequenze_testo/esercitazione_parte2.pdf).
+Gli studenti hanno a disposizione il grafico della legge di Zipf nell'[esercitazione_parte2](../lab_frequenze_testo/Esercitazione_parte2.pdf).
 Si chiede di tracciare la retta che che meglio interpola i punti e di calcolare
 coefficiente angolare e quota con l'aiuto di un righello. 
 Si suggerisce di considerare che i punti con rango più alto sono di più e quindi di cercare

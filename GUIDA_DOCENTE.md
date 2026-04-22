@@ -7,7 +7,7 @@
 | **Durata**               | 1-2 ore                                                                                                                                                 |
 | **Target**               | Studenti del Biennio                                                                                                                                    |
 | **Setting della classe** | Dividere la classe in due gruppi, a un gruppo viene assegnato il modello A e ad un gruppo il modello B. Assegnare almeno un computer ogni due studenti. |
- | **Descrizione**          | [Le fasi della lezione](descrizione_laboratori/lab_importanza_dei_dati.md)                                                                                |
+| **Descrizione**          | [Le fasi della lezione](descrizione_laboratori/lab_importanza_dei_dati.md)                                                                              |
 
 # Distanza euclidea e machine learning
 
@@ -30,3 +30,15 @@
 | **Target**               | Studenti del triennio, classe terza                                                        |
 | **Setting della classe** | Laboratorio di informatica con computer per ogni  studente e scheda dell'attività.         |
 | **Descrizione**          | [Le fasi della lezione](descrizione_laboratori/lab_frequenze_testo.md)                     |
+
+# La probabilità nei modelli di linguaggio
+
+
+| **Tema**                 |                                                                                         |
+|:-------------------------|:----------------------------------------------------------------------------------------|
+| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**) |
+| **Pre-requisiti**        | Frequenza assoluta e relativa, probabilità                                              |
+| **Durata**               | 1 ora                                                                                   |
+| **Target**               | Studenti del triennio                                                                   |
+| **Setting della classe** | Assegnare un computer ogni studente.                                                    |
+| **Descrizione**          | [Le fasi della lezione](descrizione_laboratori/lab_prob_condizionata.md)                |

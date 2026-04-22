@@ -16,7 +16,7 @@ Gli studenti vengono suddivisi in due gruppi A e B. Assicurarsi che la coppia o 
 studente con il modello A sia vicino a uno studente con il modello B per potersi
 confrontare alla fine della lezione durante la discussione.
 Si consiglia di utilizzare Colab e classroom creando un 
-compito con il notebook [esercitazione.ipynb](../lab_importanza_dei_dati/esercitazione.ipynb) 
+compito con il notebook [esercitazione.ipynb](../lab_importanza_dei_dati/Esercitazione.ipynb) 
 con una copia per ogni studente.
 Assicurarsi che ogni studente abbia scaricato in locale i seguenti file:
 1. [Immagini di Test](../lab_importanza_dei_dati/dati_test) 
