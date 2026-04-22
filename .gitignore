@@ -3,3 +3,4 @@
 *.aux
 .idea/
 .venv/
+.ipynb_checkpoints
