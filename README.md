@@ -27,3 +27,8 @@ in collaborazione con Istituto Artigianelli e
 Fondazione Bruno Kessler e presentate Durante il workshop
 "Intelligenza Artificiale al Martini - Materiali didattici in azione" del 24 maggio 2025.
 Il materiale originale è disponibile al seguente [link](https://github.com/martmartini/IAalmartini).
+
+
+
+I contenuti multimediali sono stati reperiti tramite risorse con licenza Creative Commons 
+o generati mediante sistemi di Intelligenza Artificiale per scopi didattici non commerciali.

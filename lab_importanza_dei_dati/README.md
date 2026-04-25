@@ -1,11 +1,9 @@
 # L'importanza dei dati
 
-| **Tema**                 | Costruzione di una **matrice di confusione** per confrontare due modelli di ML                                                                   |
-|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**)                                                          |
-| **Durata**               | 1 ora                                                                                                                                            |
-| **Target**               | Studenti del Biennio                                                                                                                             |
-| **Setting della classe** | Dividere la classe in due gruppi, a un gruppo viene assegnato il modello A e ad un gruppo il modello B. Assegnare un computer ogni due studenti. |
+| **Tema**                    | Costruire di una **matrice di confusione** per confrontare due modelli di ML                                                                                                                                                                 |
+|:----------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Obiettivi**               | Analizzare dati e interpretarli sviluppando deduzioni e ragionamenti sugli stessi anche con l’ausilio di rappresentazioni grafiche.<br> Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08, Digcomp3.0**). |
+| **Pre-requisiti**           | Tabella di frequenza a doppia entrata                                                                                                                                                                                                        |
 
 ## Introduzione al machine learning
 

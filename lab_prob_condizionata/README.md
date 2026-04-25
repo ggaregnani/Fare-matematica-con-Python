@@ -1,11 +1,9 @@
 # La probabilità nei modelli di linguaggio
 
-| **Tema**                 |                                                                                         |
-|:-------------------------|:----------------------------------------------------------------------------------------|
-| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**) |
-| **Durata**               | 1 ora                                                                                   |
-| **Target**               | Studenti del triennio                                                                   |
-| **Setting della classe** | Assegnare un computer ogni due studenti.                                                |
+| **Tema**                    | Costruire un semplice modello predittivo (autoregressione) a partire dalle frequenze delle parole in un testo (contesto)                                                                                                                                                                                                   |
+|:----------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Obiettivi**               | Analizzare dati e interpretarli sviluppando deduzioni e ragionamenti sugli stessi anche con l’ausilio di rappresentazioni grafiche.<br> Riconoscere che il machine learning è un tipo di programmazione utilizzato nell'IA che permette agli algoritmi di apprendere dai dati e fare previsioni (**CS3.4.09, Digcomp3.0**) |
+| **Pre-requisiti**           | Distribuzione delle frequenze e probabilità                                                                                                                                                                                                                                                                                |
 
 ## Come funziona un modello di linguaggio?
 
@@ -43,17 +41,15 @@ Nella frase appare due volte la parola piano con diversi significati. Definiamo:
 2. *parola tipo* la classe di tutte le parole token che hanno la stessa sequenza di caratteri, quindi la classe piano che rappresenta tutte le parole token piano anche con diversi significati.
   
 Il processo di tokenizzazione non sempre fa coincidere le unità con le parole.
-Vediamo come suddivide le parole una nota piattaforma di AI generativa:
-https://platform.openai.com/tokenizer.
+Vediamo come suddivide le parole una nota [piattaforma di AI generativa](https://platform.openai.com/tokenizer) e quali sono i token utilizzati.
 
-Possiamo stimare la probabilità di trovare una parola quindi tramite la **frequenza 
-relativa** di quella parola tipo o type.
+Contando i token e calcolando la loro frequenza nel testo, possiamo stimare la probabilità di trovare una parola.
 
 Sto però considerando il **contesto**?
 
 ### Gli n-grammi
 
-Per considereare il contesto devo considerare la seguenza di n parole precedenti.
+Per valutare il contesto devo considerare la seguenza di n parole precedenti.
 Definiamo questa sequenza **n-gramma**.
 
 Considero ad esempio la frase "Lo studente svolge gli esercizi di matematica". I bigrammi sono:
@@ -81,8 +77,8 @@ dove:
 - $P(A \cap B)$ è la probabilità che avvengano **sia A che B**, evento intersezione;
 - $P(B)$ è la probabilità che avvenga $B$.
 
-Nei modelli di linguaggio la probabilità di una generica parola $w_n$ dipende 
-dalle parole precedenti $w_{n−1}, w_{n−2}, \dots$:
+Applichiamo questo concetto per calcolare la probabilità di una generica parola $w_n$ 
+conoscendo le $n$ parole precedenti $w_{n−1}, w_{n−2}, \dots$:
 
 $$
 P(w_n∣w_{n−1},  w_{n−2}, \dots) 
@@ -90,6 +86,8 @@ $$
 
 dove $n$ è l'ordine dell'n-gramma che scelgo. Più parole considero più ampio sarà il contesto
 ma anche il costo computazionale.
+
+Ma come fa un modello predittivo di linguaggio a generare un testo?
 
 ## L'autoregressione
 
@@ -119,6 +117,11 @@ Apriamo il notebook Esercitazione.ipynb:
 4. Calcoliamo i bigrammi e la probabilità condizionata; 
 5. Proviamo a inserire una frase e farla completare dal nostro modello.
 
+### Riflessioni 
 
 Quali sono i limiti legati al contesto e all'autoregressione di un modello 
 di linguaggio naturale?
+
+## Fonti
+
+Linguistica computazionale, Alessandro Lenci, Serena Auriemma, Martina Miliani (Hoepli, 2025)

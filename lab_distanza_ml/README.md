@@ -1,11 +1,9 @@
 # Distanza euclidea e machine learning
 
-| **Tema**                 | Calcolo della distanza tra due punti per comprendere la matematica alla base degli algoritmi di machine learning                                                       |
-|:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Scopo (DigComp3.0)**   | Riconoscere che il machine learning è un tipo di programmazione utilizzato nell'IA che permette agli algoritmi di apprendere dai dati e fare previsioni (**CS3.4.09**) |
-| **Durata**               | 4 ore                                                                                                                                                                  |
-| **Target**               | Classe seconda a terza scuola secondaria di secondo grado                                                                                                              |
-| **Setting della classe** | Laboratorio di informatica con computer per ogni  studente. La metodologia proposta è quella del **caso studio**.                                                      |
+| **Tema**                    | Calcolare la distanza tra due punti per comprendere la matematica alla base degli algoritmi di machine learning                                                                                                                                                           |
+|:----------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Obiettivi**               | Confrontare ed analizzare figure geometriche, individuando invarianti e relazioni.<br> Riconoscere che il machine learning è un tipo di programmazione utilizzato nell'IA che permette agli algoritmi di apprendere dai dati e fare previsioni (**CS3.4.09, Digcomp3.0**) |
+| **Pre-requisiti**           | Il piano cartesiano, distanza tra due punti, teorema di Pitagora, tabella di frequenza a doppia entrata                                                                                                                                                                   |
 
 ## Caso di studio
 

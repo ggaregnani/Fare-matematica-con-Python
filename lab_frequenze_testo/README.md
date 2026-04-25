@@ -1,11 +1,9 @@
 # La legge nascosta
 
-| **Tema**                 | Analisi statistica di un testo, legge di potenza e scala log-log                           |
-|:-------------------------|:-------------------------------------------------------------------------------------------|
-| **Scopo (DigComp)**      | Comprendere come dati e addestramento influenzano l'affidabilità dell'IA (**CS1.2.08**)    |
-| **Durata**               | 2 ore                                                                                      |
-| **Target**               | Studenti del triennio, classe terza                                                        |
-| **Setting della classe** | Laboratorio di informatica con computer per ogni  studente e scheda dell'attività.         |
+| **Tema**                    | Analizzare la frequenza delle parole in un testo e derivare la legge di Zipf                                                                                                                                                                                                                                               |
+|:----------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Obiettivi**               | Analizzare dati e interpretarli sviluppando deduzioni e ragionamenti sugli stessi anche con l’ausilio di rappresentazioni grafiche.<br> Riconoscere che il machine learning è un tipo di programmazione utilizzato nell'IA che permette agli algoritmi di apprendere dai dati e fare previsioni (**CS3.4.09, Digcomp3.0**) |
+| **Pre-requisiti**           | Distribuzione di frequenze, proprietà dei logaritmi e delle potenze                                                                                                                                                                                                                                                        |
 
 ## Analisi del testo
 
@@ -87,8 +85,15 @@ Riapriamo il notebook Esercitazione_parte1_3.ipynb e verifichiamo la legge che a
 Riflettiamo sul significato della Legge di Zipf, il famoso linguista, e su come questa legge possa influenzare i
 modelli di IA generativa.
 
-Questo schema nascosto si presenta in altri fenomeni legati al web, ai social o al mondo reale?
+### Parte 4
 
+Rispondiamo e riflettiamo su queste domande:
 
+1. Quali sono le conseguenze della legge di Zipf sull'AI?
+2. Potrebbe sempre esserci una parola che non è mai stata vista in un testo?
+
+### Fonti
+
+Linguistica computazionale, Alessandro Lenci, Serena Auriemma, Martina Miliani (Hoepli, 2025)
 
 

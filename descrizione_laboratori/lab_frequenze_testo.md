@@ -43,19 +43,19 @@ Il grafico ottenuto con il dataset test è il seguente:
 ### Esercitazione parte 2 (20 minuti)
 
 Gli studenti hanno a disposizione il grafico della legge di Zipf nell'[esercitazione_parte2](../lab_frequenze_testo/Esercitazione_parte2.pdf).
-Si chiede di tracciare la retta che che meglio interpola i punti e di calcolare
+Si chiede di tracciare la retta che meglio interpola i punti e di calcolare
 coefficiente angolare e quota con l'aiuto di un righello. 
 Si suggerisce di considerare che i punti con rango più alto sono di più e quindi di cercare
 di interpolare meglio quelli.
 
 Individuati *m* e *q* e scritta l'equazione della retta, tramite le proprietà dei logaritmi
-si rivava la legge di Zipf.
+si ricava la legge di Zipf.
 
 Si può osservare che una legge di potenza in un piano loglog è rappresentata da una retta.
 
 ### Esercitazione parte 3 (15 minuti)
 Si riapre l'esercitazione e si verificano i valori di *m* e *q* trovati confrontando il 
-grafico delle legge di Zipf con i dati reali.
+grafico della legge di Zipf con i dati reali.
 
 Con il seguente codice si possono ottenere i valori di *m* e *q* della retta che meglio
 interpola i dati e confrontarli con quelli ottenuti dagli studenti, soprattutto in caso 
@@ -65,20 +65,29 @@ di difficoltà o valori che si discostano troppo dai dati reali.
 m, q = np.polyfit(log_rango, log_freq, 1)
 print(m, q)
 ```
-Se si prova ad utilizzare il dataset di train l'esponente tenderà ad uno, questo accade
+Se si prova a utilizzare il dataset di train l'esponente tenderà ad uno, questo accade
 con i corporta di grandi dimensioni.
 
-Importante è far notare e contare il numero di **hapax legomena** cioè di parole che
-compaiono una volta sola nel testo e riflettere su come l'IA abbia bisogno di corpora di 
+Importante è contare il numero di **hapax legomena** cioè di parole che
+compaiono una volta sola nel testo e sottolineare che questo schema è presente in tutte le lingue;
+fare poi riflettere su come l'AI abbia bisogno di corpora di 
 grandi dimensioni anche per questo motivo. La maggior parte delle parole, infatti, compare
 una volta solamente nei testi soprattutto se la loro lunghezza è limitata.
 
 ### Riflessioni e discussioni (15 minuti)
 
-Alcune domande o spunti sui cui discutere e riflettere:
-1. Questo schema è presente in tutte le lingue?
-2. L'IA rispetta questa legge? Quali sono le conseguenze della legge di Zipf sull'IA?
-Potrebbe sempre esserci una parola che non è mai stata vista in un testo?
-3. Ci sono altri fenomeni anche legati a internet e ai social che seguono questa legge?
+Dare spazio all'attività di *debriefing* a partire da queste domande stimolo:
+1. Quali sono le conseguenze della legge di Zipf sull'AI?
+2. Potrebbe sempre esserci una parola che non è mai stata vista in un testo?
 
+Si possono usare strumenti digitali come https://www.mentimeter.com/ per favorire la discussione e riflessione.
 
+Con questo brainstorming si cerca di comprendere come gli hapax influenzino la dimensione dei corpora
+e come sia stato fondamentale ottimizzare lo spazio 
+di archiviazione e l'efficienza del recupero dei dati per creare questi modelli.
+Gli studenti possono riflettere sul fatto che i pattern testuali influenzano l'AI
+e sviluppare la consapevolezza che la qualità e la struttura del corpus di addestramento 
+determina l'output della macchina.
+
+Si può aggiungere un'attività a casa e chiedere agli studenti di 
+cercare o riflettere su altri fenomeni anche legati a internet e ai social-network che seguono questa legge.
